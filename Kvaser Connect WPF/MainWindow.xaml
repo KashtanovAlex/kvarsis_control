@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kvaser_Connect_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="638.303">
+        Title="MainWindow" Height="620" Width="638.303">
     <Grid Margin="0,0,4,0">
             <Button Content="Initialize library" HorizontalAlignment="Left" Margin="20,20,0,0" Name="initButton" VerticalAlignment="Top" Height="Auto" Width="97" Click="initButton_Click" />
 
