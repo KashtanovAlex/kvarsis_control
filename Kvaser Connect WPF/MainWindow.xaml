@@ -15,7 +15,8 @@
             <ComboBox Name="channelComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="50" Height="Auto" Margin="75,50,0,0" SelectedIndex="0" IsEnabled="false">
                 <ComboBoxItem Name="channel1" Content="Ch.1"/>
                 <ComboBoxItem Name="channel2" Content="Ch.2"/>
-            </ComboBox>
+                <ComboBoxItem Name="channel3" Content="Ch.3"/>
+        </ComboBox>
             <Button Name="openChannelButton" Content="Open Channel" Height="Auto" HorizontalAlignment="Left" Margin="140,50,0,0" VerticalAlignment="Top" Width="100" Click="openChannelButton_Click" IsEnabled="false" />
             <Button Name="closeChannelButton" Content="Close Channel" Height="Auto" HorizontalAlignment="Left" Margin="250,50,0,0" VerticalAlignment="Top" Width="100" Click="closeChannelButton_Click" IsEnabled="false" />
             <!-- END: channelControlPanel area -->
