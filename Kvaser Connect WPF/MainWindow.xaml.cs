@@ -40,11 +40,12 @@ namespace Kvaser_Connect_WPF
             {
                 TextBox box = this.canDataBoxes[index] = new TextBox();
                 box.Height = 23;
+                box.Visibility = Visibility.Visible;
                 box.Width = 28;
-                box.MaxLength = 3;
+                box.MaxLength = 2;
                 box.VerticalAlignment = VerticalAlignment.Top;
                 box.HorizontalAlignment = HorizontalAlignment.Left;
-                box.PreviewTextInput += CheckTextBox;
+                //box.PreviewTextInput += CheckTextBox;
                 box.Margin = new Thickness(0, 0, 10, 0);
                 box.Name = String.Format("dataBox{0}", index);
                 canDataBoxPanel.Children.Add(box);
@@ -424,7 +425,9 @@ namespace Kvaser_Connect_WPF
             Array.Clear(data, 0, sizeof(byte) * Defined.MAX_DLC);
             for (int i = 0; i < dlc; i++)
             {
-                data[i] = canDataBoxes[i].Text == "" ? (byte)0 : Convert.ToByte(canDataBoxes[i].Text);
+                // data[i] = canDataBoxes[i].Text == "" ? (byte)0 : Convert.ToByte(canDataBoxes[i].Text);
+                data[i] = canDataBoxes[i].Text == "" ? (byte)0 : byte.Parse(canDataBoxes[i].Text, System.Globalization.NumberStyles.HexNumber);
+
             }
 
             int messageOptionFlags = 0;
